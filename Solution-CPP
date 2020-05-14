@@ -1,0 +1,18 @@
+#include <iostream>
+
+int main()
+{
+
+	unsigned fib1 = 0, fib2 = 1, sum = 0;
+
+	while(fib2<4000000)
+	{
+		auto tmp = fib2+fib1;
+		if(!(fib2%2)) sum+=fib2;
+		fib1=fib2;
+		fib2=tmp;
+	}	
+	std::cout << std::endl;
+	std::cout << "Result: " << sum << std::endl;
+	return 0;
+}
